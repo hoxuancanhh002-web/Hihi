@@ -180,16 +180,13 @@ struct SplashScreenView: View {
                     // ── Title ──
                     VStack(spacing: 6) {
                         HStack(spacing: 0) {
-                            Text("Cheati")
+                            Text("Matrix")
                                 .font(.system(size: 36, weight: .black))
                                 .foregroundStyle(.white)
-                            Text("OS")
+                            Text("DNI")
                                 .font(.system(size: 36, weight: .black))
                                 .foregroundStyle(cyan)
                                 .shadow(color: cyan.opacity(0.55), radius: 10)
-                            Text("Vip")
-                                .font(.system(size: 36, weight: .black))
-                                .foregroundStyle(.white)
                         }
 
                         HStack(spacing: 6) {
@@ -314,7 +311,7 @@ struct SplashScreenView: View {
                         startPoint: .leading, endPoint: .trailing))
                     .shadow(color: cyan.opacity(0.85), radius: 14)
                     .shadow(color: purple.opacity(0.50), radius: 24)
-                Text("CheatiOS")
+                Text("MatrixDNI")
                     .font(.system(size: 8.5, weight: .bold, design: .monospaced))
                     .tracking(2.0)
                     .foregroundStyle(.white.opacity(0.38))
