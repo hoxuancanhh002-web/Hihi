@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 /// The very first thing the app shows: nothing else is reachable until a valid key is redeemed.
 struct KeyEntryView: View {
@@ -70,12 +70,12 @@ struct KeyEntryView: View {
                     .disabled(isSubmitting || code.trimmingCharacters(in: .whitespaces).isEmpty)
 
                     Button {
-                        openURL(URL(string: "https://cheatiosvip.net")!)
+                        openURL(URL(string: "https://MatrixDNI.net")!)
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "heart.fill")
                                 .font(.caption.weight(.semibold))
-                            Text("Donate CheatiOSVip")
+                            Text("Donate MatrixDNI")
                                 .font(.body.weight(.semibold))
                         }
                         .frame(maxWidth: .infinity)
@@ -91,7 +91,7 @@ struct KeyEntryView: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            Text("Make By ©CheatiOSVip")
+            Text("Make By ©MatrixDNI")
                 .font(.caption2.weight(.medium))
                 .foregroundStyle(.secondary)
                 .padding(.vertical, 14)

@@ -1,4 +1,4 @@
-import Foundation
+﻿import Foundation
 import UIKit
 import Darwin
 import Combine
@@ -9,7 +9,7 @@ class AppLog: ObservableObject {
     @Published var entries: [String] = []
     func append(_ msg: String) {
         DispatchQueue.main.async { self.entries.append(msg) }
-        print("[CheatiOSVip] \(msg)")
+        print("[MatrixDNI] \(msg)")
     }
 }
 func log(_ msg: String) { AppLog.shared.append(msg) }

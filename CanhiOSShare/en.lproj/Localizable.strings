@@ -14,12 +14,12 @@
 "common.finish" = "Finish";
 
 "update.title" = "Update available";
-"update.message" = "CheatiOSVip DSW %@ is available on GitHub.";
+"update.message" = "MatrixDNI DSW %@ is available on GitHub.";
 "update.agree" = "OK";
 "update.dismiss" = "Don't show again";
 "patch.error.wrong_password" = "Incorrect password.";
 
-"attribution.title" = "About CheatiOSVip DSW";
+"attribution.title" = "About MatrixDNI DSW";
 "attribution.subtitle" = "Project information";
 "attribution.link_section" = "Project link";
 "attribution.url" = "URL";
@@ -30,18 +30,18 @@
 "onboarding.language_title" = "Choose your language";
 "onboarding.language_subtitle" = "You can change this later in Settings.";
 "onboarding.language_hint" = "Select a language to continue.";
-"onboarding.welcome_title" = "Welcome to CheatiOSVip DSW";
+"onboarding.welcome_title" = "Welcome to MatrixDNI DSW";
 "onboarding.welcome_message" = "Developed by YangJiii";
-"onboarding.welcome_badge" = "Official CheatiOSVip DSW identity";
+"onboarding.welcome_badge" = "Official MatrixDNI DSW identity";
 "onboarding.versions_title" = "Supported iOS versions";
-"onboarding.versions_subtitle" = "CheatiOSVip DSW is verified on the ranges below. Unsupported builds may have limited functionality.";
+"onboarding.versions_subtitle" = "MatrixDNI DSW is verified on the ranges below. Unsupported builds may have limited functionality.";
 "onboarding.versions_footer" = "This device: iOS %@ (%@)";
 "onboarding.beta" = "Beta";
 "onboarding.install_title" = "Certificate requirements";
-"onboarding.install_message" = "CheatiOSVip DSW requires a supported signing method to access device features.";
+"onboarding.install_message" = "MatrixDNI DSW requires a supported signing method to access device features.";
 "onboarding.install_ok" = "Works with enterprise certificates, including eSign and similar enterprise installs.";
 "onboarding.install_bad" = "Does not work with SideStore, AltStore, 3uTools or LiveContainer.";
-"onboarding.install_jailbreak" = "On iOS 17 through iOS 18.7.1, CheatiOSVip DSW will not work if the device is jailbroken.";
+"onboarding.install_jailbreak" = "On iOS 17 through iOS 18.7.1, MatrixDNI DSW will not work if the device is jailbroken.";
 "onboarding.install_footer" = "Use a supported certificate on a non-jailbroken device before continuing.";
 
 "dashboard.exploit_access" = "Exploit access";
@@ -70,7 +70,7 @@
 "dashboard.kernel_running" = "Activating…";
 "dashboard.kernel_active" = "Active";
 "dashboard.kernel_inactive" = "Inactive";
-"dashboard.enterprise_signing" = "CheatiOSVip DSW only works when signed with an enterprise certificate. SideStore, AltStore, 3uTools and LiveContainer are not supported.";
+"dashboard.enterprise_signing" = "MatrixDNI DSW only works when signed with an enterprise certificate. SideStore, AltStore, 3uTools and LiveContainer are not supported.";
 "dashboard.features" = "Features";
 "dashboard.features_footer" = "Turn on Cleaner or Wallpapers to show it in the app navigation.";
 "tab.home" = "Home";
@@ -97,7 +97,7 @@
 "cleaner.clean_button" = "Clean %@";
 "cleaner.cleaning" = "Cleaning…";
 "cleaner.confirm_title" = "Delete temporary data?";
-"cleaner.confirm_message" = "CheatiOSVip DSW will permanently delete Library/Caches and tmp from %lld selected apps (%@). Close those apps first. They may open more slowly while rebuilding caches. This cannot be undone.";
+"cleaner.confirm_message" = "MatrixDNI DSW will permanently delete Library/Caches and tmp from %lld selected apps (%@). Close those apps first. They may open more slowly while rebuilding caches. This cannot be undone.";
 "cleaner.confirm_action" = "Clean Now";
 "cleaner.result_title" = "Cleanup Finished";
 "cleaner.result_message" = "Freed %@ by removing %lld files. %lld items or apps could not be cleaned.";
@@ -111,11 +111,11 @@
 "patch.title" = "Patches";
 "patch.add" = "Add patch project";
 "patch.new" = "New Patch";
-"patch.import" = "Import .cheatiosvip";
-"patch.export" = "Export .cheatiosvip";
+"patch.import" = "Import .MatrixDNI";
+"patch.export" = "Export .MatrixDNI";
 "patch.edit" = "Edit";
 "patch.empty_title" = "No Patch Projects";
-"patch.empty_message" = "Create a project or import a .cheatiosvip package.";
+"patch.empty_message" = "Create a project or import a .MatrixDNI package.";
 "patch.game_empty_message" = "No patches found for this game.";
 "patch.menu_title" = "Patch Menu";
 "patch.menu_auto_badge" = "AUTO";
@@ -134,13 +134,13 @@
 "patch.project" = "Project";
 "patch.project_name" = "Project name";
 "patch.target_bundle" = "Target Bundle";
-"patch.workspace_bundle_footer" = "CheatiOSVip DSW creates this bundle folder in the editable patch workspace. Container UUIDs are never stored.";
+"patch.workspace_bundle_footer" = "MatrixDNI DSW creates this bundle folder in the editable patch workspace. Container UUIDs are never stored.";
 "patch.captured_content" = "Captured Content";
-"patch.workspace_edit_footer" = "After creation, manage the complete bundle tree from the CheatiOSVip DSW workspace in Files.";
+"patch.workspace_edit_footer" = "After creation, manage the complete bundle tree from the MatrixDNI DSW workspace in Files.";
 "patch.workspace" = "Workspace";
 "patch.open_workspace" = "Open Patch Files";
-"patch.workspace_detail_footer" = "Edit this bundle tree directly. Apply and Export automatically synchronize it into the encrypted .cheatiosvip package.";
-"patch.legacy_footer" = "Legacy v1 patch. It remains fully usable in this version of CheatiOSVip DSW.";
+"patch.workspace_detail_footer" = "Edit this bundle tree directly. Apply and Export automatically synchronize it into the encrypted .MatrixDNI package.";
+"patch.legacy_footer" = "Legacy v1 patch. It remains fully usable in this version of MatrixDNI DSW.";
 "patch.files" = "Files";
 "patch.folders" = "Folders";
 "patch.rules" = "Rules";
@@ -179,19 +179,19 @@
 "patch.unlock" = "Unlock";
 "patch.apply" = "Apply Patch";
 "patch.restore" = "Restore Originals";
-"patch.apply_footer" = "Before writing, CheatiOSVip DSW resolves each bundle on this device and saves every original file for recovery.";
+"patch.apply_footer" = "Before writing, MatrixDNI DSW resolves each bundle on this device and saves every original file for recovery.";
 "patch.apply_confirm_title" = "Apply this patch?";
 "patch.apply_confirm_message" = "All bundle identifiers and relative paths will be validated again. Originals are backed up before the first write.";
 "patch.restore_confirm_title" = "Restore original files?";
 "patch.created_message" = "The patch project was created.";
 "patch.updated_message" = "The patch project was updated without changing its password.";
-"patch.imported_message" = "The .cheatiosvip package was imported.";
+"patch.imported_message" = "The .MatrixDNI package was imported.";
 "patch.unlocked_message" = "Unlocked. This device will not ask for this package password again.";
 "patch.workspace_synced_message" = "The patch workspace was synchronized.";
 "patch.applied_message" = "All patch rules were applied and the originals were backed up.";
 "patch.restored_message" = "The original files were restored.";
-"patch.error.unsupported_format" = "This is not a valid .cheatiosvip patch package.";
-"patch.error.unsupported_version" = "This patch requires a newer version of CheatiOSVip DSW. Update the app before importing it.";
+"patch.error.unsupported_format" = "This is not a valid .MatrixDNI patch package.";
+"patch.error.unsupported_version" = "This patch requires a newer version of MatrixDNI DSW. Update the app before importing it.";
 "patch.error.password_or_corrupt" = "The password is incorrect or the package was modified.";
 "patch.error.invalid_bundle" = "Enter a valid app bundle identifier, not a container UUID.";
 "patch.error.unsafe_path" = "The target must be a safe path relative to the app data container.";
@@ -204,7 +204,7 @@
 "patch.error.symlink" = "Patch targets cannot pass through symbolic links.";
 "patch.error.apply" = "The patch could not be applied. Any earlier writes were rolled back.";
 "patch.error.restore" = "The originals could not be restored safely. No unverified target was overwritten.";
-"patch.error.invalid_import_link" = "This patch import link is invalid. Use a secure HTTPS link to a .cheatiosvip package.";
+"patch.error.invalid_import_link" = "This patch import link is invalid. Use a secure HTTPS link to a .MatrixDNI package.";
 "patch.error.remote_import" = "The patch could not be downloaded securely. Check the link and try again.";
 
 "accessibility.open_logs" = "Open logs";
@@ -212,7 +212,7 @@
 "accessibility.requesting_access" = "Requesting exploit access";
 "accessibility.open_editor_hint" = "Opens the MobileGestalt feature editor";
 "accessibility.run_exploit_hint" = "Requests write access required by the Gestalt editor";
-"accessibility.open_github" = "Open CheatiOSVip DSW on GitHub";
+"accessibility.open_github" = "Open MatrixDNI DSW on GitHub";
 "accessibility.open_profile" = "Open %@ profile";
 "accessibility.log_entry" = "Log entry %lld: %@";
 
@@ -251,7 +251,7 @@
 "settings.token_footer" = "Available after exploit access succeeds.";
 "settings.credits" = "Credits";
 "settings.social_media" = "Social media";
-"social.github_role" = "CheatiOSVip DSW source code";
+"social.github_role" = "MatrixDNI DSW source code";
 "social.iosvn_role" = "iOSVN Community";
 "credit.yangjiii" = "Developer & designer";
 "credit.forcequit" = "bad_query exploit";
@@ -328,7 +328,7 @@
 "logs.empty_message" = "Exploit and editor activity will appear here during this session.";
 
 "browser.title" = "App Data Browser";
-"browser.workspace" = "CheatiOSVip DSW Workspace";
+"browser.workspace" = "MatrixDNI DSW Workspace";
 "browser.workspace_subtitle" = "Patches and files available in On My iPhone";
 "browser.loading" = "Loading…";
 "browser.empty" = "No application bundles could be resolved. Tap Retry to scan again.";
@@ -473,26 +473,26 @@
 "wallpaper.recovery_summary" = "%lld installed descriptors";
 "wallpaper.restore" = "Restore";
 "wallpaper.restored" = "Restored";
-"wallpaper.recovery_footer" = "Restore removes only descriptor folders created by that CheatiOSVip DSW installation. Existing wallpapers are never part of the removal list.";
+"wallpaper.recovery_footer" = "Restore removes only descriptor folders created by that MatrixDNI DSW installation. Existing wallpapers are never part of the removal list.";
 "wallpaper.safety" = "Safety";
 "wallpaper.additive_only" = "Adds new descriptors without replacing Collections";
 "wallpaper.uuid_dynamic" = "Resolves com.apple.PosterBoard dynamically";
 "wallpaper.archive_validation" = "Checks ZIP paths, sizes, symlinks and CRC before install";
-"wallpaper.ios27_footer" = "PosterBoard is build-sensitive. CheatiOSVip DSW discovers the live store layout instead of assuming generation 61, but some plugin-based wallpapers may still be incompatible with iOS 27.";
+"wallpaper.ios27_footer" = "PosterBoard is build-sensitive. MatrixDNI DSW discovers the live store layout instead of assuming generation 61, but some plugin-based wallpapers may still be incompatible with iOS 27.";
 "wallpaper.install" = "Apply";
 "wallpaper.install_warning_title" = "Install this wallpaper package?";
 "wallpaper.install_warning_message" = "Apply “%@” with %lld wallpapers on iOS %@ (%@)? Existing wallpapers stay unchanged.";
-"wallpaper.installed_by_app" = "Wallpapers added by CheatiOSVip DSW";
-"wallpaper.reset" = "Reset CheatiOSVip DSW Wallpapers";
-"wallpaper.reset_footer" = "Only wallpapers added by CheatiOSVip DSW are removed.";
+"wallpaper.installed_by_app" = "Wallpapers added by MatrixDNI DSW";
+"wallpaper.reset" = "Reset MatrixDNI DSW Wallpapers";
+"wallpaper.reset_footer" = "Only wallpapers added by MatrixDNI DSW are removed.";
 "wallpaper.reset_title" = "Reset added wallpapers?";
-"wallpaper.reset_message" = "Remove %lld wallpapers added by CheatiOSVip DSW? Existing wallpapers stay unchanged.";
+"wallpaper.reset_message" = "Remove %lld wallpapers added by MatrixDNI DSW? Existing wallpapers stay unchanged.";
 "wallpaper.reset_done_title" = "Reset Complete";
-"wallpaper.reset_done_message" = "Wallpapers added by CheatiOSVip DSW were removed and PosterBoard was refreshed.";
+"wallpaper.reset_done_message" = "Wallpapers added by MatrixDNI DSW were removed and PosterBoard was refreshed.";
 "wallpaper.restore_title" = "Restore this installation?";
-"wallpaper.restore_message" = "This removes %lld descriptor folders previously added by CheatiOSVip DSW. Wallpapers that existed before the installation are preserved.";
+"wallpaper.restore_message" = "This removes %lld descriptor folders previously added by MatrixDNI DSW. Wallpapers that existed before the installation are preserved.";
 "wallpaper.delete_title" = "Remove imported package?";
-"wallpaper.delete_message" = "“%@” will be removed from CheatiOSVip DSW staging. Installed wallpapers are not affected.";
+"wallpaper.delete_message" = "“%@” will be removed from MatrixDNI DSW staging. Installed wallpapers are not affected.";
 "wallpaper.importing" = "Validating .tendies packages…";
 "wallpaper.installing" = "Installing descriptors safely…";
 "wallpaper.restoring" = "Resetting wallpapers…";
@@ -503,7 +503,7 @@
 "wallpaper.install_done_opened" = "PosterBoard was opened to refresh its collections. Close it from the app switcher, then check the Lock Screen wallpaper picker.";
 "wallpaper.install_done_manual" = "Open the Lock Screen wallpaper picker to refresh PosterBoard. If the wallpaper is not visible, close PosterBoard from the app switcher and try again.";
 "wallpaper.restore_done_title" = "Installation Restored";
-"wallpaper.restore_done_message" = "The descriptors added by CheatiOSVip DSW were removed. PosterBoard was asked to refresh.";
+"wallpaper.restore_done_message" = "The descriptors added by MatrixDNI DSW were removed. PosterBoard was asked to refresh.";
 "wallpaper.operation_failed" = "Wallpaper Operation Failed";
 "wallpaper.error.unsafe_container" = "PosterBoard returned an unsafe or unexpected container path.";
 "wallpaper.error.store_unavailable" = "The PosterBoard extension store is unavailable on this build.";
@@ -511,15 +511,15 @@
 "wallpaper.error.package" = "This is not a supported .tendies package.";
 "wallpaper.error.archive" = "The archive is malformed or contains an unsafe path.";
 "wallpaper.error.symlink" = "Wallpaper packages and target folders cannot contain symbolic links.";
-"wallpaper.error.size" = "The wallpaper package exceeds CheatiOSVip DSW's safe size or item limits.";
+"wallpaper.error.size" = "The wallpaper package exceeds MatrixDNI DSW's safe size or item limits.";
 "wallpaper.error.no_descriptors" = "No supported wallpaper descriptors were found in this package.";
-"wallpaper.error.access" = "CheatiOSVip DSW could not obtain verified read/write access to com.apple.PosterBoard.";
+"wallpaper.error.access" = "MatrixDNI DSW could not obtain verified read/write access to com.apple.PosterBoard.";
 "wallpaper.error.backup" = "The recovery journal could not be written, so installation was stopped.";
 "wallpaper.error.install" = "Installation failed and any descriptors added during this attempt were rolled back.";
-"wallpaper.error.restore" = "CheatiOSVip DSW could not safely remove every descriptor from this installation.";
+"wallpaper.error.restore" = "MatrixDNI DSW could not safely remove every descriptor from this installation.";
 "wallpaper.error.unknown" = "An unexpected error occurred. Review Session Logs for details.";
 "license.title" = "Enter Activation Key";
-"license.subtitle" = "Enter your key to unlock CheatiOSVip DSW on this device.";
+"license.subtitle" = "Enter your key to unlock MatrixDNI DSW on this device.";
 "license.placeholder" = "Enter key";
 "license.activate" = "Activate";
 "license.change_key" = "Change Key";
@@ -541,7 +541,7 @@
 "common.build" = "Build %@";
 
 "maintenance.default_title" = "Maintenance";
-"maintenance.default_message" = "CheatiOSVip DSW is temporarily unavailable. Check back soon.";
+"maintenance.default_message" = "MatrixDNI DSW is temporarily unavailable. Check back soon.";
 
 "patch.importing_original" = "Importing original…";
 "patch.no_games_yet" = "No supported games available.";
