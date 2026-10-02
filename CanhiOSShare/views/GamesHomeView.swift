@@ -383,49 +383,19 @@ struct GamesHomeView: View {
 
     private var gameGrid: some View {
         VStack(spacing: 10) {
-            let featured = Array(games.prefix(2))
-            let rest = Array(games.dropFirst(2))
-            let pairs: [[RemoteGameSummary]] = stride(from: 0, to: rest.count, by: 2)
-                .map { Array(rest[$0..<min($0+2, rest.count)]) }
-
-            if !featured.isEmpty {
-                HStack(spacing: 10) {
-                    ForEach(Array(featured.enumerated()), id: \.element.id) { idx, game in
-                        Button { selectedGame = game } label: {
-                            GameCardView(
-                                title: game.name,
-                                subtitle: game.bundleID,
-                                bannerColor: AppTheme.resolvedBannerColor(game.bannerColor),
-                                iconURL: game.iconURL,
-                                systemIconName: "app.fill",
-                                actionLabel: game.type == "app" ? "M\u{1EDE} \u{1EE8}NG D\u{1EE4}NG" : "M\u{1EDE} GAME",
-                                isFeatured: true
-                            )
-                        }
-                        .buttonStyle(.plain)
-                    }
-                    if featured.count == 1 { Spacer().frame(maxWidth: .infinity) }
+            ForEach(games) { game in
+                Button { selectedGame = game } label: {
+                    GameCardView(
+                        title: game.name,
+                        subtitle: game.bundleID,
+                        bannerColor: AppTheme.resolvedBannerColor(game.bannerColor),
+                        iconURL: game.iconURL,
+                        systemIconName: "app.fill",
+                        actionLabel: game.type == "app" ? "M\u{1EDE} \u{1EE8}NG D\u{1EE4}NG" : "M\u{1EDE} GAME",
+                        isFeatured: false
+                    )
                 }
-            }
-
-            ForEach(Array(pairs.enumerated()), id: \.offset) { _, pair in
-                HStack(spacing: 10) {
-                    ForEach(pair) { game in
-                        Button { selectedGame = game } label: {
-                            GameCardView(
-                                title: game.name,
-                                subtitle: game.bundleID,
-                                bannerColor: AppTheme.resolvedBannerColor(game.bannerColor),
-                                iconURL: game.iconURL,
-                                systemIconName: "app.fill",
-                                actionLabel: game.type == "app" ? "M\u{1EDE} \u{1EE8}NG D\u{1EE4}NG" : "M\u{1EDE} GAME",
-                                isFeatured: false
-                            )
-                        }
-                        .buttonStyle(.plain)
-                    }
-                    if pair.count == 1 { Spacer().frame(maxWidth: .infinity) }
-                }
+                .buttonStyle(.plain)
             }
         }
     }
@@ -674,113 +644,99 @@ struct GameCardView: View {
     private var cornerRadius: CGFloat { 18 }
 
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            // Full-bleed background
+        ZStack {
+            // Background
             LinearGradient(
                 colors: [
                     Color(red: 0.05, green: 0.02, blue: 0.16),
-                    bannerColor.opacity(0.28),
+                    bannerColor.opacity(0.22),
                     Color(red: 0.03, green: 0.02, blue: 0.12)
                 ],
                 startPoint: .topLeading, endPoint: .bottomTrailing
             )
-
-            // Inner top highlight
+            // Top highlight
             LinearGradient(
-                colors: [.white.opacity(0.06), .clear],
+                colors: [.white.opacity(0.05), .clear],
                 startPoint: .top, endPoint: .center
             )
-
-            // Atmospheric glow behind icon
-            RadialGradient(
-                colors: [bannerColor.opacity(0.40), bannerColor.opacity(0.10), .clear],
-                center: .center, startRadius: 0, endRadius: 80
-            )
-            .padding(.bottom, cardHeight * 0.30)
-            .padding(.top, 8)
-
-            // Game icon — centered upper area
-            iconView
-                .frame(width: iconSize, height: iconSize)
-                .clipShape(RoundedRectangle(cornerRadius: iconSize * 0.22, style: .continuous))
-                .overlay(
-                    RoundedRectangle(cornerRadius: iconSize * 0.22, style: .continuous)
-                        .strokeBorder(
-                            LinearGradient(
-                                colors: [bannerColor.opacity(0.95), bannerColor.opacity(0.40)],
-                                startPoint: .topLeading, endPoint: .bottomTrailing
-                            ),
-                            lineWidth: 1.5
-                        )
+            // Glow behind icon
+            HStack(spacing: 0) {
+                RadialGradient(
+                    colors: [bannerColor.opacity(0.38), .clear],
+                    center: .center, startRadius: 0, endRadius: 52
                 )
-                .shadow(color: bannerColor.opacity(0.95), radius: isFeatured ? 12 : 9)
-                .shadow(color: bannerColor.opacity(0.50), radius: isFeatured ? 26 : 20, y: 6)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
-                .padding(.bottom, cardHeight * 0.33)
+                .frame(width: 90)
+                Spacer()
+            }
 
-            // Bottom info strip with divider + arrow
-            VStack(spacing: 0) {
-                Divider()
-                    .overlay(bannerColor.opacity(0.28))
+            // Row content
+            HStack(spacing: 14) {
+                // Icon
+                iconView
+                    .frame(width: 62, height: 62)
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            .strokeBorder(
+                                LinearGradient(
+                                    colors: [bannerColor.opacity(0.90), bannerColor.opacity(0.35)],
+                                    startPoint: .topLeading, endPoint: .bottomTrailing
+                                ),
+                                lineWidth: 1.5
+                            )
+                    )
+                    .shadow(color: bannerColor.opacity(0.85), radius: 9)
+                    .shadow(color: bannerColor.opacity(0.40), radius: 18, y: 4)
 
-                HStack(spacing: 6) {
-                    VStack(alignment: .leading, spacing: 3) {
+                // Info
+                VStack(alignment: .leading, spacing: 5) {
+                    HStack(spacing: 7) {
                         Text(title)
-                            .font(.system(size: isFeatured ? 13.5 : 12, weight: .bold, design: .rounded))
+                            .font(.system(size: 15, weight: .bold, design: .rounded))
                             .foregroundStyle(.white)
                             .lineLimit(1)
-                        HStack(spacing: 4) {
-                            Circle()
-                                .fill(Color(red: 0.18, green: 0.92, blue: 0.48))
-                                .frame(width: 5, height: 5)
-                                .shadow(color: Color(red: 0.18, green: 0.92, blue: 0.48), radius: 4)
-                            Text("\u{0110}\u{00E3} s\u{1EB5}n s\u{00E0}ng")
-                                .font(.system(size: 9.5, weight: .semibold))
-                                .foregroundStyle(Color(red: 0.18, green: 0.92, blue: 0.48))
+                        if let badge = cornerBadge {
+                            Text(badge.text)
+                                .font(.system(size: 8, weight: .black))
+                                .kerning(0.6)
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 7)
+                                .padding(.vertical, 3)
+                                .background(
+                                    LinearGradient(
+                                        colors: [badge.color, badge.color.opacity(0.80)],
+                                        startPoint: .topLeading, endPoint: .bottomTrailing
+                                    ),
+                                    in: Capsule()
+                                )
+                                .shadow(color: badge.color.opacity(0.65), radius: 5)
                         }
                     }
-                    Spacer()
-                    // Arrow button
-                    Image(systemName: "arrow.right")
-                        .font(.system(size: isFeatured ? 11 : 10, weight: .bold))
-                        .foregroundStyle(bannerColor)
-                        .padding(6)
-                        .background(bannerColor.opacity(0.18), in: Circle())
-                        .overlay(Circle().strokeBorder(bannerColor.opacity(0.55), lineWidth: 1))
+                    HStack(spacing: 5) {
+                        Circle()
+                            .fill(Color(red: 0.18, green: 0.92, blue: 0.48))
+                            .frame(width: 6, height: 6)
+                            .shadow(color: Color(red: 0.18, green: 0.92, blue: 0.48), radius: 4)
+                        Text("\u{0110}\u{00E3} s\u{1EB5}n s\u{00E0}ng")
+                            .font(.system(size: 11, weight: .semibold))
+                            .foregroundStyle(Color(red: 0.18, green: 0.92, blue: 0.48))
+                    }
                 }
-                .padding(.horizontal, 10)
-                .padding(.vertical, 9)
-            }
-            .frame(maxWidth: .infinity)
-            .background(
-                LinearGradient(
-                    colors: [.clear, Color.black.opacity(0.88)],
-                    startPoint: .top, endPoint: .bottom
-                )
-            )
 
-            // HOT / PRO badge — top right (pill shape)
-            if let badge = cornerBadge {
-                Text(badge.text)
-                    .font(.system(size: 8.5, weight: .black))
-                    .kerning(0.8)
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 9)
-                    .padding(.vertical, 5)
-                    .background(
-                        LinearGradient(
-                            colors: [badge.color, badge.color.opacity(0.80)],
-                            startPoint: .topLeading, endPoint: .bottomTrailing
-                        ),
-                        in: Capsule()
-                    )
-                    .shadow(color: badge.color.opacity(0.70), radius: 8)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-                    .padding(10)
+                Spacer()
+
+                // Arrow button
+                Image(systemName: "arrow.right")
+                    .font(.system(size: 11, weight: .bold))
+                    .foregroundStyle(bannerColor)
+                    .frame(width: 32, height: 32)
+                    .background(bannerColor.opacity(0.16), in: Circle())
+                    .overlay(Circle().strokeBorder(bannerColor.opacity(0.50), lineWidth: 1))
             }
+            .padding(.horizontal, 14)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: cardHeight)
+        .frame(height: 90)
         .clipShape(CutShape(cut: cornerRadius))
         .overlay(
             CutShape(cut: cornerRadius)
@@ -797,8 +753,8 @@ struct GameCardView: View {
                     lineWidth: 1.5
                 )
         )
-        .shadow(color: bannerColor.opacity(0.45), radius: isFeatured ? 20 : 16, x: 0, y: isFeatured ? 8 : 6)
-        .shadow(color: .black.opacity(0.55), radius: 6, x: 0, y: 4)
+        .shadow(color: bannerColor.opacity(0.40), radius: 14, x: 0, y: 5)
+        .shadow(color: .black.opacity(0.50), radius: 6, x: 0, y: 3)
     }
 
     @ViewBuilder
