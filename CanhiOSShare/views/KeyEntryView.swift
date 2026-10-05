@@ -69,23 +69,6 @@ struct KeyEntryView: View {
                     .padding(.horizontal, 28)
                     .disabled(isSubmitting || code.trimmingCharacters(in: .whitespaces).isEmpty)
 
-                    Button {
-                        openURL(URL(string: "https://ALAPHAREGEDIT.COM.net")!)
-                    } label: {
-                        HStack(spacing: 8) {
-                            Image(systemName: "heart.fill")
-                                .font(.caption.weight(.semibold))
-                            Text("Donate ALAPHAREGEDIT.COM")
-                                .font(.body.weight(.semibold))
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 14)
-                    }
-                    .background(.clear, in: CutShape(cut: 14))
-                    .overlay(CutShape(cut: 14).strokeBorder(AppTheme.techCardStroke, lineWidth: 1.5))
-                    .foregroundStyle(AppTheme.techGlow)
-                    .padding(.horizontal, 28)
-
                     Spacer(minLength: 56)
                 }
             }

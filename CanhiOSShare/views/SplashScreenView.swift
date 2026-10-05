@@ -180,11 +180,11 @@ struct SplashScreenView: View {
                     // ── Title ──
                     VStack(spacing: 6) {
                         HStack(spacing: 0) {
-                            Text("Matrix")
-                                .font(.system(size: 36, weight: .black))
+                            Text("ALAPHAREGEDIT")
+                                .font(.system(size: 22, weight: .black))
                                 .foregroundStyle(.white)
-                            Text("DNI")
-                                .font(.system(size: 36, weight: .black))
+                            Text(".COM")
+                                .font(.system(size: 22, weight: .black))
                                 .foregroundStyle(cyan)
                                 .shadow(color: cyan.opacity(0.55), radius: 10)
                         }
