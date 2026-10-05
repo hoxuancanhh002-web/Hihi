@@ -311,7 +311,7 @@ struct SplashScreenView: View {
                         startPoint: .leading, endPoint: .trailing))
                     .shadow(color: cyan.opacity(0.85), radius: 14)
                     .shadow(color: purple.opacity(0.50), radius: 24)
-                Text("MatrixDNI")
+                Text("ALAPHAREGEDIT.COM")
                     .font(.system(size: 8.5, weight: .bold, design: .monospaced))
                     .tracking(2.0)
                     .foregroundStyle(.white.opacity(0.38))

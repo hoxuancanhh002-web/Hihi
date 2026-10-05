@@ -70,12 +70,12 @@ struct KeyEntryView: View {
                     .disabled(isSubmitting || code.trimmingCharacters(in: .whitespaces).isEmpty)
 
                     Button {
-                        openURL(URL(string: "https://MatrixDNI.net")!)
+                        openURL(URL(string: "https://ALAPHAREGEDIT.COM.net")!)
                     } label: {
                         HStack(spacing: 8) {
                             Image(systemName: "heart.fill")
                                 .font(.caption.weight(.semibold))
-                            Text("Donate MatrixDNI")
+                            Text("Donate ALAPHAREGEDIT.COM")
                                 .font(.body.weight(.semibold))
                         }
                         .frame(maxWidth: .infinity)
@@ -91,7 +91,7 @@ struct KeyEntryView: View {
             }
         }
         .safeAreaInset(edge: .bottom) {
-            Text("Make By ©MatrixDNI")
+            Text("Make By ©ALAPHAREGEDIT.COM")
                 .font(.caption2.weight(.medium))
                 .foregroundStyle(.secondary)
                 .padding(.vertical, 14)

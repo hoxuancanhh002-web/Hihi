@@ -173,9 +173,9 @@ struct GamesHomeView: View {
     private var cyberHeader: some View {
         HStack(alignment: .top, spacing: 0) {
             VStack(alignment: .leading, spacing: 5) {
-                // Title row: "MatrixDNI" + crown+DSW block
+                // Title row: "ALAPHAREGEDIT.COM" + crown+DSW block
                 HStack(alignment: .bottom, spacing: 8) {
-                    Text("MatrixDNI")
+                    Text("ALAPHAREGEDIT.COM")
                         .font(.system(size: 30, weight: .black))
                         .foregroundStyle(
                             LinearGradient(
